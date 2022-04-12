@@ -1,4 +1,4 @@
-defaultNamespace: starboard
+defaultNamespace: starboard-operator
 helm:
   releaseName: starboard-operator
   repo: https://aquasecurity.github.io/helm-charts

@@ -1,4 +1,4 @@
-defaultNamespace: starboard
+defaultNamespace: trivy
 helm:
   releaseName: trivy
   repo: https://aquasecurity.github.io/helm-charts
