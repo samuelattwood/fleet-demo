@@ -3,6 +3,13 @@ helm:
   releaseName: starboard-operator
   repo: https://aquasecurity.github.io/helm-charts
   chart: starboard-operator
+diff:
+  comparePatches:
+    - apiVersion: aquasecurity.github.io/v1alpha1
+      kind: ClusterComplianceReport
+      name: nsa
+      operations:
+        - {"op":"remove", "path":"/metadata/labels/app.kubernetes.io~1managed-by"}
 targetCustomizations:
 - name: dev
   helm:
