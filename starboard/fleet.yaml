@@ -1,0 +1,22 @@
+namespace: fleet-default
+helm:
+  releaseName: starboard
+  repo: https://aquasecurity.github.io/helm-charts
+  chart: starboard
+targetCustomizations:
+- name: dev
+  helm:
+    values:
+      operator:
+        logDevMode: true
+  clusterSelector:
+    matchLabels:
+      env: dev
+- name: prod
+  helm:
+    values:
+      operator:
+        replicas: 3
+  clusterSelector:
+    matchLabels:
+      env: prod
