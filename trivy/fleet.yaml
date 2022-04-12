@@ -8,6 +8,7 @@ targetCustomizations:
   helm:
     values:
       replicaCount: 2
+targets:
   clusterSelector:
     matchLabels:
       env: prod
