@@ -8,6 +8,7 @@ targetCustomizations:
   helm:
     values:
       operator:
+        clusterComplianceEnabled: false
         logDevMode: true
   clusterSelector:
     matchLabels:
@@ -16,6 +17,7 @@ targetCustomizations:
   helm:
     values:
       operator:
+        clusterComplianceEnabled: false
         replicas: 3
   clusterSelector:
     matchLabels:
