@@ -13,6 +13,6 @@ targetCustomizations:
       env: dev
 targets:
 - name: dev
-    clusterSelector:
+  clusterSelector:
     matchLabels:
       env: dev
