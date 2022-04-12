@@ -1,8 +1,8 @@
-namespace: fleet-default
+defaultNamespace: starboard
 helm:
-  releaseName: starboard
+  releaseName: starboard-operator
   repo: https://aquasecurity.github.io/helm-charts
-  chart: starboard
+  chart: starboard-operator
 targetCustomizations:
 - name: dev
   helm:
