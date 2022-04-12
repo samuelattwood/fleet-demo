@@ -12,7 +12,7 @@ targetCustomizations:
     matchLabels:
       env: dev
 targets:
-- name: dev
+- name: prod
   clusterSelector:
     matchLabels:
-      env: dev
+      env: prod
