@@ -4,11 +4,15 @@ helm:
   repo: https://aquasecurity.github.io/helm-charts
   chart: trivy
 targetCustomizations:
-- name: prod
+- name: dev
   helm:
     values:
-      replicaCount: 2
-targets:
+      replicaCount: 1
   clusterSelector:
     matchLabels:
-      env: prod
+      env: dev
+targets:
+- name: dev
+    clusterSelector:
+    matchLabels:
+      env: dev
