@@ -18,3 +18,5 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: prod
+dependsOn:
+- name: fleet-longhorn-longhorn

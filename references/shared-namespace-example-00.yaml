@@ -1,0 +1,47 @@
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: tools-chart-a-b
+  namespace: fleet-default
+spec:
+  repo: https://github.com/rancher/fleet-examples.git
+  paths:
+  - charts/A
+  - charts/B
+  branch: main
+  targets:
+  - name: tools
+    clusterSelector:
+      matchLabels:
+        env: tools
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: qa-chart-c
+  namespace: fleet-default
+spec:
+  repo: https://github.com/rancher/fleet-examples.git
+  paths:
+  - charts/C
+  branch: main
+  targets:
+  - name: qa
+    clusterSelector:
+      matchLabels:
+        env: qa
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: all-chart-d
+  namespace: fleet-default
+spec:
+  repo: https://github.com/rancher/fleet-examples.git
+  paths:
+  - charts/D
+  branch: main
+  targets:
+  - name: all
+    clusterSelector: {}
