@@ -4,4 +4,4 @@ helm:
   repo: https://charts.rancher.io
   chart: longhorn
 dependsOn:
-- name: fleet-longhorn-longhorn-crds
+- name: fleet-longhorn-longhorn-crd
